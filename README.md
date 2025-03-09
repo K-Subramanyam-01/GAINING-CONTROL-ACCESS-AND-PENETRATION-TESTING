@@ -1,25 +1,26 @@
-#Project: GAINING-CONTROL-ACCESS-AND-PENETRATION-TESTING
+#Project-GAINING CONTROL ACCESS AND PENETRATION TESTING
 
 ## Overview
 
-This repository contains Cybersecurity project focused on network security, penetration testing, and ethical hacking.The project in this repository is a client-server application designed to execute remote commands and capture keystrokes using a keylogger and DOS attack for penetration testing.
+This repository contains GAINING CONTROL ACCESS AND PENETRATION TESTING  project focused on control access,network security, penetration testing.It is a client-server application designed to execute remote commands and capture keystrokes using a keylogger and DOS ATTACK for penetration testing.
 
 ### Description
 
-This project demonstrates a simple client-server architecture where the client can receive and execute commands from the server. Additionally, the client is capable of running a keylogger that captures keystrokes and sends the log file back to the server. This project is intended for educational purposes to understand the concepts of remote command execution and keylogging in the context of cybersecurity.
+This project demonstrates a simple client-server architecture where the client can receive and execute commands from the server. Additionally, the client is capable of running a keylogger that captures keystrokes and sends the log file back to the server and DOS attack for Penetration testing. This project is intended for educational purposes to understand the concepts of remote command execution,Keylogging and DOS ATTACK.
 
 ### Features
 
 - **Client-Server Communication**: Establishes a connection between a client and a server using TCP sockets.
 - **Remote Command Execution**: Allows the server to send various commands to the client for execution, including shutdown, restart, DOS attack, and more.
+- **Pentesting**: Demonstrates penetration testing techniques using DOS attacks and keyloggers.
 - **Keylogging**: Captures keystrokes on the client machine and sends the log file to the server.
-- **File Transfer**: Supports sending and receiving files between the client and server.
+-  **File Transfer**: Supports sending and receiving files between the client and server.
 - **Error Handling**: Includes basic error handling for connection issues and invalid commands.
 
 ### Components
 
-- **Client Script** (`CLIENT`): A Python script that connects to the server, receives commands, executes them, and sends keylogger logs back to the server.
-- **Server Script** (`SERVER`): A Python script that listens for incoming client connections, sends commands, and receives keylogger logs from the client.
+- **Client Script** (`CLIENT.py`): A Python script that connects to the server, receives commands, executes them, and sends keylogger logs back to the server.
+- **Server Script** (`SERVER.py`): A Python script that listens for incoming client connections, sends commands, and receives keylogger logs from the client.
 
 ### Switch Case Options
 
@@ -28,11 +29,10 @@ The server can send the following commands to the client:
 - **1. Shutdown**: The client will execute a shutdown command.
 - **2. Restart**: The client will execute a restart command.
 - **3. DOS Attack**: The client will open a web browser and navigate to a specified URL to simulate a DOS attack.
-- **4. Shantabhai**: The client will open a web browser and navigate to a specific YouTube video.
-- **5. Send File**: The server will send a file to the client.
-- **6. Remove File**: The client will remove a specified file.
-- **7. Keylogger**: The client will start a keylogger, capture keystrokes, and send the log file to the server.
-- **8. Exit**: The server will disconnect from the client.
+- **4. Send File**: The server will send a file to the client.
+- **5. Remove File**: The client will remove a specified file.
+- **6. Keylogger**: The client will start a keylogger, capture keystrokes, and send the log file to the server.
+- **7. Exit**: The server will disconnect from the client.
 
 ### How to Run
 
