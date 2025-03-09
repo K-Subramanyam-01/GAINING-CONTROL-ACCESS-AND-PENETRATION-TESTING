@@ -1,10 +1,10 @@
-# GAINING-CONTROL-ACCESSAND-PENETRATION-TESTING
+#Project: GAINING-CONTROL-ACCESS AND-PENETRATION-TESTING
 
 ## Overview
 
 This repository contains various cybersecurity projects focused on network security, penetration testing, and ethical hacking. One of the key projects in this repository is a client-server application designed to execute remote commands and capture keystrokes using a keylogger.
 
-## Project: Remote Command Execution and Keylogging
+
 
 ### Description
 
