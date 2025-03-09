@@ -37,19 +37,19 @@ The server can send the following commands to the client:
 ### How to Run
 
 1. **Setup the Server**:
-   - Run the `masster-1.py` script on the server machine.
+   - Run the `SERVER.py` script on the server machine.
    - The server will listen for incoming connections and provide a menu to send commands to the client.
 
    ```bash
-   python masster-1.py
+   python SERVER.py
    ```
 
 2. **Setup the Client**:
-   - Run the `Ash-2.py` script on the client machine.
+   - Run the `CLIENT.py` script on the client machine.
    - The client will connect to the server and wait for commands.
 
    ```bash
-   python Ash-2.py
+   python CLIENT.py
    ```
 
 3. **Executing Commands**:
