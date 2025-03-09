@@ -2,9 +2,7 @@
 
 ## Overview
 
-This repository contains various cybersecurity projects focused on network security, penetration testing, and ethical hacking. One of the key projects in this repository is a client-server application designed to execute remote commands and capture keystrokes using a keylogger.
-
-
+This repository contains Cybersecurity project focused on network security, penetration testing, and ethical hacking.The project in this repository is a client-server application designed to execute remote commands and capture keystrokes using a keylogger and DOS attack for penetration testing.
 
 ### Description
 
@@ -20,8 +18,8 @@ This project demonstrates a simple client-server architecture where the client c
 
 ### Components
 
-- **Client Script** (`Ash-2.py`): A Python script that connects to the server, receives commands, executes them, and sends keylogger logs back to the server.
-- **Server Script** (`masster-1.py`): A Python script that listens for incoming client connections, sends commands, and receives keylogger logs from the client.
+- **Client Script** (`CLIENT`): A Python script that connects to the server, receives commands, executes them, and sends keylogger logs back to the server.
+- **Server Script** (`SERVER`): A Python script that listens for incoming client connections, sends commands, and receives keylogger logs from the client.
 
 ### Switch Case Options
 
