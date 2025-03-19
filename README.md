@@ -34,7 +34,7 @@ The project uses socket programming to establish communication between the clien
 The Transmission Control Protocol (TCP) is used for reliable communication between the client and server. The Internet Protocol (IP) is used for addressing and routing packets across the network.
 
 ### IP Addressing and Ports
-The server binds to an IP address (`10.250.6.64`) and listens on a specific port (`8080`). Clients connect to this IP address and port to establish a connection with the server.
+The server binds to an IP address and listens on a specific port (`8080`). Clients connect to this IP address and port to establish a connection with the server.
 
 ## Cybersecurity Concepts
 ### Keylogging
